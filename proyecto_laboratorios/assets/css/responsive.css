@@ -1,0 +1,132 @@
+/* ============================================
+   ESTILOS RESPONSIVE GLOBALES
+   ============================================ */
+
+@media (max-width: 768px) {
+    /* Header */
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    nav ul {
+        gap: 1rem;
+    }
+    
+    nav a {
+        font-size: 0.9rem;
+        padding: 0.5rem 0.8rem;
+    }
+    
+    /* Main */
+    main {
+        padding: 0 1rem;
+    }
+    
+    /* Hero */
+    .hero, .bienvenida {
+        padding: 2rem;
+    }
+    
+    .hero h2, .bienvenida h2 {
+        font-size: 1.8rem;
+    }
+    
+    /* Laboratorios */
+    .laboratorios-container {
+        flex-direction: column;
+    }
+    
+    .lab-list {
+        flex: 1 1 100%;
+    }
+    
+    .lab-detail {
+        flex: 1 1 100%;
+    }
+    
+    .laboratorios-hero h2 {
+        font-size: 2rem;
+    }
+    
+    /* Sobre Mi */
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .estadisticas-card {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .sobre-mi-header h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Header */
+    header h1 {
+        font-size: 1.5rem;
+    }
+    
+    /* Main */
+    main {
+        padding: 0 0.5rem;
+    }
+    
+    /* Hero */
+    .hero, .bienvenida {
+        padding: 1.5rem;
+    }
+    
+    .hero h2, .bienvenida h2 {
+        font-size: 1.5rem;
+    }
+    
+    /* Laboratorios */
+    .laboratorios-hero {
+        padding: 2rem 1rem;
+    }
+    
+    .laboratorios-hero h2 {
+        font-size: 1.5rem;
+    }
+    
+    .laboratorios-hero p {
+        font-size: 1rem;
+    }
+    
+    .lab-detail {
+        padding: 1.5rem;
+    }
+    
+    .lab-detail-card h3 {
+        font-size: 1.5rem;
+    }
+    
+    /* Sobre Mi */
+    .sobre-mi-main {
+        padding: 0 1rem;
+    }
+    
+    .sobre-mi-bienvenida {
+        padding: 1.5rem;
+    }
+    
+    .sobre-mi-bienvenida h2 {
+        font-size: 1.5rem;
+    }
+    
+    .estadisticas-card {
+        grid-template-columns: 1fr;
+    }
+    
+    .sobre-mi-header h1 {
+        font-size: 1.5rem;
+    }
+    
+    /* Botones */
+    .btn, .btn-cta {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+}

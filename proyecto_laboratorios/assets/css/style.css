@@ -1,0 +1,444 @@
+/* ============================================
+   ESTILOS GLOBALES - LICEO INSUCO VALPARAÍSO
+   VERSIÓN AMARILLO INSTITUCIONAL
+   ============================================ */
+
+:root {
+    --amarillo-institucional: #F5C842;
+    --amarillo-oscuro: #D4A017;
+    --amarillo-claro: #FFE082;
+    --amarillo-suave: #FFF8E1;
+    --azul-marino: #0d2137;
+    --azul-oceano: #1a5276;
+    --azul-valparaiso: #2980b9;
+    --celeste-maritimo: #5dade2;
+    --verde-esperanza: #27ae60;
+    --rojo-institucional: #e74c3c;
+    --gris-claro: #f8f9fa;
+    --gris-medio: #bdc3c7;
+    --gris-oscuro: #2c3e50;
+    --sombra-suave: 0 4px 15px rgba(13, 33, 55, 0.1);
+    --sombra-media: 0 8px 30px rgba(13, 33, 55, 0.15);
+    --sombra-fuerte: 0 15px 50px rgba(13, 33, 55, 0.2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #fafafa 0%, var(--amarillo-suave) 50%, #f8f4e8 100%);
+    color: var(--gris-oscuro);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* --- Encabezado general --- */
+header {
+    background: linear-gradient(135deg, var(--azul-marino) 0%, var(--azul-oceano) 50%, #1a3a5c 100%);
+    color: white;
+    padding: 1.5rem 0;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--sombra-media);
+    border-bottom: 4px solid var(--amarillo-institucional);
+}
+
+header::before {
+    content: '⚓';
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    font-size: 3rem;
+    opacity: 0.08;
+    transform: rotate(45deg);
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    bottom: -60px;
+    left: -60px;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(245, 200, 66, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 1.2rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    position: relative;
+}
+
+header h1::after {
+    content: '✦';
+    color: var(--amarillo-institucional);
+    margin-left: 10px;
+    font-size: 1.8rem;
+}
+
+/* --- Navegación --- */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: var(--amarillo-institucional);
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 70%;
+}
+
+nav a:hover {
+    background: rgba(255,255,255,0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+nav a.active {
+    background: var(--amarillo-institucional);
+    color: var(--azul-marino);
+    border-color: var(--amarillo-institucional);
+    box-shadow: 0 4px 15px rgba(245, 200, 66, 0.4);
+}
+
+nav a.active::after {
+    width: 70%;
+    background: var(--azul-marino);
+}
+
+/* --- Contenido principal --- */
+main {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+}
+
+/* --- Bienvenida / Hero --- */
+.bienvenida, .hero {
+    background: white;
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: var(--sombra-media);
+    margin-bottom: 2rem;
+    border-left: 6px solid var(--amarillo-institucional);
+    position: relative;
+    background: linear-gradient(135deg, white 0%, var(--amarillo-suave) 100%);
+}
+
+.bienvenida::before, .hero::before {
+    content: '🏫';
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 3rem;
+    opacity: 0.1;
+}
+
+.bienvenida h2, .hero h2 {
+    color: var(--azul-marino);
+    font-size: 2.2rem;
+    margin-bottom: 1.2rem;
+    font-weight: 800;
+    position: relative;
+    display: inline-block;
+}
+
+.bienvenida h2::after, .hero h2::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 60%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--amarillo-institucional), var(--amarillo-oscuro));
+    border-radius: 2px;
+}
+
+.bienvenida p, .hero p {
+    font-size: 1.15rem;
+    color: var(--gris-oscuro);
+    line-height: 1.8;
+    margin-top: 1rem;
+}
+
+/* --- Botones --- */
+.btn {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--amarillo-institucional) 0%, var(--amarillo-oscuro) 100%);
+    color: var(--azul-marino);
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(245, 200, 66, 0.3);
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(245, 200, 66, 0.5);
+    color: var(--azul-marino);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+}
+
+/* --- Secciones informativas --- */
+.info {
+    background: linear-gradient(135deg, var(--azul-marino) 0%, var(--azul-oceano) 100%);
+    color: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    box-shadow: var(--sombra-media);
+    border-left: 6px solid var(--amarillo-institucional);
+}
+
+.info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--amarillo-institucional);
+}
+
+.info p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    line-height: 1.7;
+}
+
+/* --- Footer general --- */
+footer {
+    background: linear-gradient(135deg, var(--azul-marino) 0%, var(--azul-oceano) 100%);
+    color: white;
+    text-align: center;
+    padding: 2.5rem;
+    margin-top: 3rem;
+    border-top: 4px solid var(--amarillo-institucional);
+    position: relative;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--amarillo-institucional), transparent);
+}
+
+footer p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0.5rem 0;
+}
+
+footer .footer-contacto {
+    margin-top: 1rem;
+    color: var(--amarillo-claro);
+}
+
+footer .footer-contacto a {
+    color: var(--amarillo-institucional);
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: 600;
+}
+
+footer .footer-contacto a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* --- Marca de agua institucional --- */
+.watermark {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    font-size: 10rem;
+    color: rgba(245, 200, 66, 0.04);
+    pointer-events: none;
+    z-index: -1;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    nav ul {
+        gap: 0.8rem;
+    }
+    
+    nav a {
+        font-size: 0.85rem;
+        padding: 0.4rem 0.8rem;
+    }
+    
+    .bienvenida, .hero {
+        padding: 2rem;
+    }
+    
+    .bienvenida h2, .hero h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 0 1rem;
+    }
+    
+    .bienvenida, .hero {
+        padding: 1.5rem;
+    }
+    
+    .bienvenida h2, .hero h2 {
+        font-size: 1.5rem;
+    }
+    
+    nav a {
+        font-size: 0.75rem;
+        padding: 0.3rem 0.6rem;
+    }
+    
+    header h1 {
+        font-size: 1.5rem;
+    }
+}
+/* ============================================
+   LOGO INSTITUCIONAL
+   ============================================ */
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0 1rem;
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+    transform: scale(1.05);
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+/* Responsive para el logo */
+@media (max-width: 768px) {
+    .logo-img {
+        height: 35px;
+    }
+    
+    .logo h1 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-img {
+        height: 28px;
+    }
+    
+    .logo h1 {
+        font-size: 1rem;
+    }
+    
+    .logo {
+        gap: 0.5rem;
+    }
+}
+/* ============================================
+   REDES SOCIALES EN FOOTER
+   ============================================ */
+
+.footer-redes {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.footer-redes a {
+    color: var(--amarillo-claro);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.05);
+}
+
+.footer-redes a:hover {
+    color: var(--amarillo-institucional);
+    background: rgba(255,255,255,0.15);
+    transform: translateY(-3px);
+}
+
+@media (max-width: 480px) {
+    .footer-redes {
+        gap: 0.8rem;
+    }
+    
+    .footer-redes a {
+        font-size: 0.9rem;
+        padding: 0.2rem 0.6rem;
+    }
+}

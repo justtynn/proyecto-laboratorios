@@ -1,0 +1,30 @@
+@media(max-width:768px){
+    .laboratorios-hero h2{
+        font-size: 2rem;
+    }
+    .laboratorios-grid{
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+}
+@media(max-width:480px){
+    .laboratorios-hero{
+        padding: 2rem 1rem;
+    }
+    .laboratorios-hero h2{
+        font-size: 1.5rem;
+    }
+    .laboratorios-grid{
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .lab-card{
+        padding: 1rem;
+    }
+    .lab-card h3{
+        font-size: 1.2rem;
+    }
+    .lab-info p{
+        font-size: 0.9rem;
+    }
+}

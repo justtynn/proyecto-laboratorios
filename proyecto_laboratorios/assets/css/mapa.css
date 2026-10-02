@@ -1,0 +1,251 @@
+/* ============================================
+   MAPA INTERACTIVO - ESTILOS
+   ============================================ */
+
+.mapa-hero {
+    background: linear-gradient(135deg, var(--azul-marino) 0%, var(--azul-oceano) 50%, #1a3a5c 100%);
+    color: white;
+    text-align: center;
+    padding: 2.5rem 2rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    border-bottom: 4px solid var(--amarillo-institucional);
+}
+
+.mapa-hero h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+.mapa-hero h2::after {
+    content: '✦';
+    color: var(--amarillo-institucional);
+    margin-left: 10px;
+}
+
+/* Contenedor principal */
+.mapa-container {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.mapa-wrapper {
+    flex: 2;
+    min-width: 300px;
+}
+
+.mapa-interactivo {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--sombra-media);
+    border: 3px solid var(--amarillo-institucional);
+}
+
+.plano-liceo {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Marcadores */
+.marcador {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+    border: 3px solid white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: white;
+    z-index: 2;
+}
+
+.marcador::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.3);
+    animation: pulse 2s infinite;
+}
+
+.marcador.disponible {
+    background: var(--verde-esperanza);
+}
+
+.marcador.ocupado {
+    background: var(--rojo-institucional);
+}
+
+.marcador.seleccionado {
+    background: var(--amarillo-institucional);
+    transform: translate(-50%, -50%) scale(1.3);
+    border-color: var(--azul-marino);
+    z-index: 3;
+}
+
+.marcador:hover {
+    transform: translate(-50%, -50%) scale(1.2);
+    z-index: 4;
+}
+
+.marcador .tooltip {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--azul-marino);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    margin-bottom: 8px;
+}
+
+.marcador:hover .tooltip {
+    opacity: 1;
+}
+
+/* Animación de pulso */
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.2); opacity: 0.5; }
+}
+
+/* Panel de información */
+.info-panel {
+    flex: 1;
+    min-width: 250px;
+    background: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: var(--sombra-media);
+    border-top: 4px solid var(--amarillo-institucional);
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.info-panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--amarillo-institucional);
+    padding-bottom: 0.5rem;
+}
+
+.info-panel-header h3 {
+    color: var(--azul-marino);
+    font-size: 1.3rem;
+}
+
+.close-panel {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--gris-oscuro);
+    transition: transform 0.3s ease;
+}
+
+.close-panel:hover {
+    transform: rotate(90deg);
+}
+
+.info-placeholder {
+    color: var(--gris-medio);
+    text-align: center;
+    padding: 2rem 0;
+}
+
+/* Leyenda */
+.leyenda {
+    background: white;
+    border-radius: 15px;
+    padding: 1.5rem 2rem;
+    box-shadow: var(--sombra-suave);
+    margin-bottom: 2rem;
+    border-left: 4px solid var(--amarillo-institucional);
+}
+
+.leyenda h3 {
+    color: var(--azul-marino);
+    margin-bottom: 0.5rem;
+}
+
+.leyenda-items {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.leyenda-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.leyenda-color {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+}
+
+.leyenda-color.disponible { background: var(--verde-esperanza); }
+.leyenda-color.ocupado { background: var(--rojo-institucional); }
+.leyenda-color.seleccionado { background: var(--amarillo-institucional); }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .mapa-container {
+        flex-direction: column;
+    }
+    
+    .info-panel {
+        max-height: 300px;
+    }
+    
+    .marcador {
+        width: 25px;
+        height: 25px;
+        font-size: 0.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .marcador {
+        width: 20px;
+        height: 20px;
+        font-size: 0.5rem;
+        border-width: 2px;
+    }
+    
+    .marcador .tooltip {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.5rem;
+    }
+    
+    .leyenda-items {
+        gap: 1rem;
+    }
+}

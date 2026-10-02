@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Liceo INSUCO Valparaíso</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/contacto.css">
+</head>
+<body class="contacto-page">
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="../assets/imagenes/logo-insuco.png" alt="Logo Liceo INSUCO" class="logo-img">
+            </div>
+            <div class="logo">
+                <h1>Laboratorios INSUCO</h1>
+            </div>
+            <ul class="menu">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="laboratorios.html">Laboratorios</a></li>
+                <li><a href="sobre-mi.html">Sobre Mi</a></li>
+                <li><a href="contacto.html" class="active">Contacto</a></li>
+                <li><a href="mapa.html">Mapa</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contacto-main">
+        <section class="contacto-hero">
+            <h2>Contacto</h2>
+            <p>Estamos aquí para ayudarte. Contáctanos por cualquier medio que prefieras.</p>
+        </section>
+
+        <div class="contacto-container">
+            <section class="contacto-info">
+                <h3>Información de Contacto</h3>
+                
+                <div class="info-item">
+                    <span class="icono">📍</span>
+                    <div>
+                        <strong>Dirección</strong>
+                        <p>Avenida Argentina # 747, Valparaíso, Chile</p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <span class="icono">📞</span>
+                    <div>
+                        <strong>Teléfonos</strong>
+                        <p>+56 2 3352 4200</p>
+                        <p>+56 2 3352 4203</p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <span class="icono">✉️</span>
+                    <div>
+                        <strong>Correos Electrónicos</strong>
+                        <p>contacto@insuco.cl</p>
+                        <p>soporte.labs@insuco.cl</p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <span class="icono">🕐</span>
+                    <div>
+                        <strong>Horario de Atención</strong>
+                        <p>Lunes a Viernes: 8:00 - 17:00</p>
+                        <p>Sábados: 9:00 - 13:00</p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <span class="icono">🌐</span>
+                    <div>
+                        <strong>Redes Sociales</strong>
+                        <div class="redes-sociales">
+                            <a href="https://www.facebook.com/share/1HpYqfM4oQ/" target="_blank" class="red-social" rel="noopener noreferrer">
+                                📘 Facebook
+                            </a>
+                            <a href="https://www.instagram.com/insucovalparaiso?stkn=ams1cDF2bjFpejI1" target="_blank" class="red-social" rel="noopener noreferrer">
+                                📸 Instagram
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="contacto-formulario">
+                <h3>Envíanos un Mensaje</h3>
+                <form id="formulario-contacto">
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo</label>
+                        <input type="text" id="nombre" name="nombre" required placeholder="Ingresa tu nombre">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" required placeholder="tucorreo@ejemplo.cl">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="+56 9 1234 5678">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="asunto">Asunto</label>
+                        <select id="asunto" name="asunto" required>
+                            <option value="">Selecciona un asunto</option>
+                            <option value="consulta">Consulta General</option>
+                            <option value="reserva">Reserva de Laboratorio</option>
+                            <option value="problema">Problema Técnico</option>
+                            <option value="sugerencia">Sugerencia</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Escribe tu mensaje aquí..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+                </form>
+                
+                <div id="mensaje-exito" class="mensaje-exito" style="display: none;">
+                    ✅ ¡Mensaje enviado con éxito! Te responderemos pronto.
+                </div>
+            </section>
+        </div>
+
+        <section class="mapa-ubicacion">
+            <h3>Nuestra Ubicación</h3>
+            <div class="mapa">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3344.5!2d-71.6!3d-33.04!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689dbf8b5c4c6d1%3A0x4e3aa1b5cd6a8d0d!2sValpara%C3%ADso%2C%20Chile!5e0!3m2!1ses!2scl!4v1645000000000!5m2!1ses!2scl" 
+                    width="100%" 
+                    height="400" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Laboratorios INSUCO. Todos los derechos reservados</p>
+        <div class="footer-redes">
+            <a href="https://www.facebook.com/share/1HpYqfM4oQ/" target="_blank" rel="noopener noreferrer">📘 Facebook</a>
+            <a href="https://www.instagram.com/insucovalparaiso?stkn=ams1cDF2bjFpejI1" target="_blank" rel="noopener noreferrer">📸 Instagram</a>
+        </div>
+        <p class="footer-contacto">
+            Contacto: <a href="mailto:contacto@insuco.cl">contacto@insuco.cl</a>
+        </p>
+    </footer>
+
+    <div class="watermark">INSUCO</div>
+
+    <script src="../assets/js/contacto.js"></script>
+</body>
+</html>

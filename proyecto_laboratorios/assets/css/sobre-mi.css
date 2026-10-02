@@ -1,0 +1,299 @@
+/* ============================================
+   SOBRE MÍ - ESTILOS INSTITUCIONALES
+   VERSIÓN AMARILLO INSUCO
+   ============================================ */
+
+:root {
+    --amarillo-institucional: #F5C842;
+    --amarillo-oscuro: #D4A017;
+    --amarillo-claro: #FFE082;
+    --amarillo-suave: #FFF8E1;
+    --azul-marino: #0d2137;
+    --azul-oceano: #1a5276;
+    --azul-valparaiso: #2980b9;
+    --celeste-maritimo: #5dade2;
+    --verde-esperanza: #27ae60;
+    --rojo-institucional: #e74c3c;
+    --naranja-calido: #e67e22;
+    --gris-claro: #f8f9fa;
+    --gris-oscuro: #2c3e50;
+    --sombra-suave: 0 4px 15px rgba(13, 33, 55, 0.1);
+    --sombra-media: 0 8px 30px rgba(13, 33, 55, 0.15);
+}
+
+body.sobre-mi-page {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #fafafa 0%, var(--amarillo-suave) 50%, #f8f4e8 100%);
+    color: var(--gris-oscuro);
+    line-height: 1.7;
+    min-height: 100vh;
+}
+
+/* --- Sección de bienvenida --- */
+.sobre-mi-bienvenida {
+    background: white;
+    border-radius: 15px;
+    padding: 3rem;
+    margin-bottom: 3rem;
+    box-shadow: var(--sombra-media);
+    border-left: 6px solid var(--amarillo-institucional);
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, white 0%, var(--amarillo-suave) 100%);
+}
+
+.sobre-mi-bienvenida::before {
+    content: '🏫';
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 3rem;
+    opacity: 0.08;
+}
+
+.sobre-mi-bienvenida h2 {
+    color: var(--azul-marino);
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+.sobre-mi-bienvenida h2::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 60%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--amarillo-institucional), var(--amarillo-oscuro));
+    border-radius: 2px;
+}
+
+.sobre-mi-bienvenida p {
+    font-size: 1.15rem;
+    color: var(--gris-oscuro);
+    line-height: 1.8;
+    margin-top: 1rem;
+}
+
+/* --- Estadísticas --- */
+.estadisticas-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: var(--sombra-suave);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    text-align: center;
+    border-top: 4px solid var(--amarillo-institucional);
+}
+
+.estadistica {
+    padding: 1.5rem;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--azul-marino) 0%, var(--azul-oceano) 100%);
+    color: white;
+    transition: transform 0.3s ease;
+    border-bottom: 3px solid var(--amarillo-institucional);
+}
+
+.estadistica:hover {
+    transform: translateY(-5px);
+}
+
+.estadistica .numero {
+    font-size: 2.5rem;
+    font-weight: 800;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.estadistica .etiqueta {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    font-weight: 500;
+}
+
+/* --- Secciones --- */
+.about-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.about-section {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: var(--sombra-suave);
+    transition: all 0.3s ease;
+    border-top: 4px solid var(--amarillo-institucional);
+    position: relative;
+}
+
+.about-section:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-media);
+}
+
+.about-section h3 {
+    color: var(--azul-marino);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.about-section h3::before {
+    content: '✦';
+    color: var(--amarillo-institucional);
+    font-size: 1.3rem;
+}
+
+.about-section p {
+    color: var(--gris-oscuro);
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+/* --- Listas --- */
+.about-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-section ul li {
+    padding: 0.5rem 0;
+    padding-left: 1.8rem;
+    position: relative;
+    font-size: 0.95rem;
+    border-bottom: 1px solid var(--gris-claro);
+}
+
+.about-section ul li:last-child {
+    border-bottom: none;
+}
+
+.about-section ul li::before {
+    content: '✦';
+    position: absolute;
+    left: 0;
+    color: var(--amarillo-institucional);
+    font-weight: bold;
+}
+
+/* --- Sección Misión (destacada) --- */
+.about-section.mision {
+    background: linear-gradient(135deg, var(--azul-marino) 0%, var(--azul-oceano) 100%);
+    color: white;
+    border-top-color: var(--amarillo-institucional);
+}
+
+.about-section.mision h3 {
+    color: white;
+}
+
+.about-section.mision h3::before {
+    color: var(--amarillo-institucional);
+}
+
+.about-section.mision p {
+    color: rgba(255,255,255,0.9);
+    font-size: 1.05rem;
+}
+
+/* --- Sección Funcionalidades Futuras --- */
+.about-section.futuras {
+    background: linear-gradient(135deg, white 0%, var(--amarillo-suave) 100%);
+    border: 2px solid var(--amarillo-institucional);
+}
+
+.about-section.futuras ul li::before {
+    content: '🚀';
+    font-size: 1.1rem;
+}
+
+/* --- Cita destacada --- */
+.cita-destacada {
+    background: linear-gradient(135deg, var(--amarillo-institucional) 0%, var(--amarillo-oscuro) 100%);
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem 0;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: var(--azul-marino);
+    position: relative;
+    box-shadow: var(--sombra-media);
+}
+
+.cita-destacada::before {
+    content: '"';
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    font-size: 4rem;
+    color: white;
+    opacity: 0.3;
+    font-style: normal;
+}
+
+/* --- Botón CTA --- */
+.btn-cta {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--amarillo-institucional) 0%, var(--amarillo-oscuro) 100%);
+    color: var(--azul-marino);
+    padding: 1rem 2.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(245, 200, 66, 0.3);
+}
+
+.btn-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(245, 200, 66, 0.5);
+    color: var(--azul-marino);
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .sobre-mi-bienvenida h2 {
+        font-size: 1.8rem;
+    }
+    
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .estadisticas-card {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .sobre-mi-main {
+        padding: 0 1rem;
+    }
+    
+    .sobre-mi-bienvenida {
+        padding: 1.5rem;
+    }
+    
+    .sobre-mi-bienvenida h2 {
+        font-size: 1.5rem;
+    }
+    
+    .estadisticas-card {
+        grid-template-columns: 1fr;
+    }
+}

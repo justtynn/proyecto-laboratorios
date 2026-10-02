@@ -1,0 +1,389 @@
+/* ============================================
+   CONTACTO - ESTILOS INSTITUCIONALES
+   VERSIÓN AMARILLO INSUCO
+   ============================================ */
+
+:root {
+    --amarillo-institucional: #F5C842;
+    --amarillo-oscuro: #D4A017;
+    --amarillo-claro: #FFE082;
+    --amarillo-suave: #FFF8E1;
+    --azul-marino: #0d2137;
+    --azul-oceano: #1a5276;
+    --azul-valparaiso: #2980b9;
+    --verde-esperanza: #27ae60;
+    --rojo-institucional: #e74c3c;
+    --gris-claro: #f8f9fa;
+    --gris-oscuro: #2c3e50;
+    --sombra-suave: 0 4px 15px rgba(13, 33, 55, 0.1);
+    --sombra-media: 0 8px 30px rgba(13, 33, 55, 0.15);
+}
+
+body.contacto-page {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #fafafa 0%, var(--amarillo-suave) 50%, #f8f4e8 100%);
+    color: var(--gris-oscuro);
+    line-height: 1.7;
+    min-height: 100vh;
+}
+
+/* --- Hero de contacto --- */
+.contacto-hero {
+    background: linear-gradient(135deg, var(--azul-marino) 0%, var(--azul-oceano) 50%, #1a3a5c 100%);
+    color: white;
+    text-align: center;
+    padding: 3.5rem 2rem;
+    border-radius: 15px;
+    margin-bottom: 2.5rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--sombra-media);
+    border-bottom: 4px solid var(--amarillo-institucional);
+}
+
+.contacto-hero::before {
+    content: '✉️';
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 4rem;
+    opacity: 0.08;
+}
+
+.contacto-hero::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(245, 200, 66, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+.contacto-hero h2 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.contacto-hero h2::after {
+    content: '✦';
+    color: var(--amarillo-institucional);
+    margin-left: 10px;
+}
+
+.contacto-hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* --- Contenedor principal --- */
+.contacto-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* --- Información de contacto --- */
+.contacto-info {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: var(--sombra-suave);
+    border-top: 4px solid var(--amarillo-institucional);
+}
+
+.contacto-info h3 {
+    color: var(--azul-marino);
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+.contacto-info h3::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 60%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--amarillo-institucional), var(--amarillo-oscuro));
+    border-radius: 2px;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--gris-claro);
+    transition: all 0.3s ease;
+}
+
+.info-item:hover {
+    background: var(--amarillo-suave);
+    border-radius: 8px;
+    padding-left: 1rem;
+}
+
+.info-item:last-child {
+    border-bottom: none;
+}
+
+.icono {
+    font-size: 1.8rem;
+    min-width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--amarillo-institucional) 0%, var(--amarillo-oscuro) 100%);
+    border-radius: 12px;
+    box-shadow: var(--sombra-suave);
+}
+
+.info-item strong {
+    color: var(--azul-marino);
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+.info-item p {
+    color: var(--gris-oscuro);
+    margin: 0.2rem 0;
+}
+
+/* --- Redes sociales --- */
+.redes-sociales {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.red-social {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.4rem 1rem;
+    background: linear-gradient(135deg, var(--amarillo-institucional) 0%, var(--amarillo-oscuro) 100%);
+    color: var(--azul-marino);
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(245, 200, 66, 0.2);
+}
+
+.red-social:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 20px rgba(245, 200, 66, 0.4);
+}
+
+/* --- Formulario de contacto --- */
+.contacto-formulario {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: var(--sombra-suave);
+    border-top: 4px solid var(--amarillo-institucional);
+}
+
+.contacto-formulario h3 {
+    color: var(--azul-marino);
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+.contacto-formulario h3::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 60%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--amarillo-institucional), var(--amarillo-oscuro));
+    border-radius: 2px;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    color: var(--azul-marino);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 2px solid var(--gris-claro);
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    background: var(--gris-claro);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--amarillo-institucional);
+    background: white;
+    box-shadow: 0 0 0 3px rgba(245, 200, 66, 0.15);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* --- Botón enviar --- */
+.btn-enviar {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(135deg, var(--amarillo-institucional) 0%, var(--amarillo-oscuro) 100%);
+    color: var(--azul-marino);
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(245, 200, 66, 0.3);
+}
+
+.btn-enviar:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(245, 200, 66, 0.5);
+}
+
+.btn-enviar:active {
+    transform: translateY(-1px);
+}
+
+/* --- Mensaje de éxito --- */
+.mensaje-exito {
+    background: linear-gradient(135deg, var(--verde-esperanza) 0%, #1e8449 100%);
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 1.5rem;
+    font-weight: 600;
+    animation: fadeIn 0.5s ease;
+}
+
+/* --- Mapa de ubicación --- */
+.mapa-ubicacion {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: var(--sombra-suave);
+    margin-bottom: 3rem;
+    border-top: 4px solid var(--amarillo-institucional);
+}
+
+.mapa-ubicacion h3 {
+    color: var(--azul-marino);
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+.mapa-ubicacion h3::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 60%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--amarillo-institucional), var(--amarillo-oscuro));
+    border-radius: 2px;
+}
+
+.mapa {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--sombra-suave);
+    border: 3px solid var(--amarillo-institucional);
+}
+
+/* --- Animaciones --- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contacto-info,
+.contacto-formulario {
+    animation: fadeIn 0.8s ease-out;
+}
+
+.contacto-formulario {
+    animation-delay: 0.2s;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .contacto-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .contacto-hero h2 {
+        font-size: 2rem;
+    }
+    
+    .contacto-hero p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contacto-hero {
+        padding: 2rem 1rem;
+    }
+    
+    .contacto-hero h2 {
+        font-size: 1.5rem;
+    }
+    
+    .contacto-info,
+    .contacto-formulario {
+        padding: 1.5rem;
+    }
+    
+    .info-item {
+        flex-direction: column;
+    }
+    
+    .icono {
+        width: 40px;
+        height: 40px;
+        font-size: 1.4rem;
+    }
+}

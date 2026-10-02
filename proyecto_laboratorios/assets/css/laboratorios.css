@@ -1,0 +1,435 @@
+/* ============================================
+   LABORATORIOS - ESTILOS INSTITUCIONALES
+   VERSIÓN AMARILLO INSUCO
+   ============================================ */
+
+:root {
+    --amarillo-institucional: #F5C842;
+    --amarillo-oscuro: #D4A017;
+    --amarillo-claro: #FFE082;
+    --amarillo-suave: #FFF8E1;
+    --azul-marino: #0d2137;
+    --azul-oceano: #1a5276;
+    --azul-valparaiso: #2980b9;
+    --celeste-maritimo: #5dade2;
+    --verde-esperanza: #27ae60;
+    --rojo-institucional: #e74c3c;
+    --naranja-calido: #e67e22;
+    --gris-claro: #f8f9fa;
+    --gris-oscuro: #2c3e50;
+    --sombra-suave: 0 4px 15px rgba(13, 33, 55, 0.1);
+    --sombra-media: 0 8px 30px rgba(13, 33, 55, 0.15);
+}
+
+/* --- Hero de laboratorios --- */
+.laboratorios-hero {
+    background: linear-gradient(135deg, var(--azul-marino) 0%, var(--azul-oceano) 50%, #1a3a5c 100%);
+    color: white;
+    text-align: center;
+    padding: 3.5rem 2rem;
+    border-radius: 15px;
+    margin-bottom: 2.5rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--sombra-media);
+    border-bottom: 4px solid var(--amarillo-institucional);
+}
+
+.laboratorios-hero::before {
+    content: '💻';
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 4rem;
+    opacity: 0.08;
+}
+
+.laboratorios-hero::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(245, 200, 66, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+.laboratorios-hero h2 {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+    font-weight: 800;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.laboratorios-hero h2::after {
+    content: '✦';
+    color: var(--amarillo-institucional);
+    margin-left: 10px;
+}
+
+.laboratorios-hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* --- Grid de laboratorios --- */
+.laboratorios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* --- Tarjeta de laboratorio --- */
+.lab-card {
+    background: white;
+    padding: 1.8rem;
+    border-radius: 15px;
+    box-shadow: var(--sombra-suave);
+    transition: all 0.3s ease;
+    border-top: 4px solid var(--amarillo-institucional);
+    position: relative;
+    overflow: hidden;
+}
+
+.lab-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, var(--amarillo-suave) 0%, transparent 50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 15px;
+}
+
+.lab-card:hover::before {
+    opacity: 1;
+}
+
+.lab-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--sombra-media);
+}
+
+.lab-card h3 {
+    color: var(--azul-marino);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--amarillo-institucional);
+    position: relative;
+    z-index: 1;
+}
+
+.lab-info {
+    position: relative;
+    z-index: 1;
+}
+
+.lab-info p {
+    margin: 0.7rem 0;
+    font-size: 0.95rem;
+    color: var(--gris-oscuro);
+}
+
+.icon {
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+}
+
+/* --- Estados de disponibilidad --- */
+.estado {
+    display: inline-block;
+    padding: 0.4rem 1.2rem;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+    letter-spacing: 0.5px;
+}
+
+.estado.disponible {
+    background: linear-gradient(135deg, var(--verde-esperanza) 0%, #1e8449 100%);
+    color: white;
+    box-shadow: 0 3px 10px rgba(39, 174, 96, 0.3);
+}
+
+.estado.ocupado {
+    background: linear-gradient(135deg, var(--rojo-institucional) 0%, #c0392b 100%);
+    color: white;
+    box-shadow: 0 3px 10px rgba(231, 76, 60, 0.3);
+}
+
+/* --- Botón cambiar disponibilidad --- */
+.btn-toggle {
+    background: linear-gradient(135deg, var(--amarillo-institucional) 0%, var(--amarillo-oscuro) 100%);
+    color: var(--azul-marino);
+    border: none;
+    padding: 0.7rem 2rem;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(245, 200, 66, 0.3);
+    position: relative;
+    z-index: 1;
+}
+
+.btn-toggle:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(245, 200, 66, 0.5);
+}
+
+/* --- Panel de admin --- */
+#login-form input {
+    padding: 0.5rem;
+    border: 2px solid var(--gris-claro);
+    border-radius: 8px;
+    flex: 1;
+    min-width: 150px;
+    transition: border-color 0.3s ease;
+}
+
+#login-form input:focus {
+    border-color: var(--amarillo-institucional);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(245, 200, 66, 0.2);
+}
+
+.btn-login {
+    background: linear-gradient(135deg, var(--amarillo-institucional) 0%, var(--amarillo-oscuro) 100%);
+    color: var(--azul-marino);
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(245, 200, 66, 0.4);
+}
+
+.btn-logout {
+    background: var(--rojo-institucional);
+    color: white;
+    padding: 0.3rem 1rem;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-left: 1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-logout:hover {
+    background: #c0392b;
+    transform: translateY(-2px);
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .laboratorios-hero h2 {
+        font-size: 2rem;
+    }
+    
+    .laboratorios-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .laboratorios-hero {
+        padding: 2rem 1rem;
+    }
+    
+    .laboratorios-hero h2 {
+        font-size: 1.5rem;
+    }
+    
+    .laboratorios-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .lab-card {
+        padding: 1.2rem;
+    }
+}
+/* ============================================
+   GALERÍA DE IMÁGENES - MINIATURAS
+   ============================================ */
+
+.lab-galeria {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 2px solid var(--amarillo-institucional);
+}
+
+.lab-galeria h4 {
+    color: var(--azul-marino);
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+    font-weight: 700;
+}
+
+.galeria-thumbnails {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+    gap: 0.5rem;
+}
+
+.thumbnail {
+    width: 100%;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 3px solid transparent;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.thumbnail:hover {
+    border-color: var(--amarillo-institucional);
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(245, 200, 66, 0.4);
+}
+
+/* ============================================
+   MODAL / LIGHTBOX DE IMÁGENES
+   ============================================ */
+
+.image-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(13, 33, 55, 0.95);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    animation: fadeInModal 0.3s ease;
+}
+
+.image-modal.active {
+    display: flex;
+}
+
+.image-modal-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-modal-content img {
+    max-width: 100%;
+    max-height: 85vh;
+    border-radius: 10px;
+    box-shadow: 0 10px 50px rgba(0,0,0,0.5);
+    border: 4px solid var(--amarillo-institucional);
+    animation: zoomIn 0.3s ease;
+}
+
+.image-modal-close {
+    position: absolute;
+    top: -50px;
+    right: 0;
+    background: var(--amarillo-institucional);
+    color: var(--azul-marino);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.image-modal-close:hover {
+    transform: rotate(90deg) scale(1.1);
+    background: white;
+}
+
+.image-modal-prev,
+.image-modal-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--amarillo-institucional);
+    color: var(--azul-marino);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.image-modal-prev { left: -70px; }
+.image-modal-next { right: -70px; }
+
+.image-modal-prev:hover,
+.image-modal-next:hover {
+    background: white;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.image-modal-counter {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    background: rgba(245, 200, 66, 0.2);
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    border: 1px solid var(--amarillo-institucional);
+}
+
+@keyframes fadeInModal {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+@media (max-width: 768px) {
+    .image-modal-prev { left: 10px; }
+    .image-modal-next { right: 10px; }
+    .image-modal-close { top: 10px; right: 10px; }
+    .image-modal-prev, .image-modal-next { width: 40px; height: 40px; font-size: 1.2rem; }
+}
+
+@media (max-width: 480px) {
+    .galeria-thumbnails { grid-template-columns: repeat(auto-fill, minmax(55px, 1fr)); }
+    .thumbnail { height: 55px; }
+}

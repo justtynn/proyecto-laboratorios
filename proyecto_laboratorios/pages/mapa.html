@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Interactivo - Liceo INSUCO</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/mapa.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="../assets/imagenes/logo-insuco.png" alt="Logo Liceo INSUCO" class="logo-img">
+            </div>
+             <div class="logo">
+                <h1>Laboratorios INSUCO</h1>
+            </div>
+            <ul class="menu">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="laboratorios.html">Laboratorios</a></li>
+                <li><a href="sobre-mi.html">Sobre Mi</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="mapa.html" class="active">Mapa</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="mapa-hero">
+            <h2>🗺️ Mapa Interactivo del Liceo INSUCO</h2>
+            <p>Encuentra la ubicación de todos los laboratorios en el plano del liceo</p>
+        </section>
+
+        <section class="mapa-container">
+            <div class="mapa-wrapper">
+                <div class="mapa-interactivo" id="mapaInteractivo">
+                    <img src="../assets/images/plano-liceo.png" alt="Plano del Liceo INSUCO" class="plano-liceo" id="planoLiceo">
+                    <div id="marcadores-container"></div>
+                </div>
+            </div>
+
+            <div class="info-panel" id="infoPanel">
+                <div class="info-panel-header">
+                    <h3>📍 Laboratorio</h3>
+                    <button class="close-panel" id="closePanel">✕</button>
+                </div>
+                <div id="infoPanelContent">
+                    <p class="info-placeholder">Haz clic en un laboratorio para ver su información</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="leyenda">
+            <h3>🔍 Leyenda</h3>
+            <div class="leyenda-items">
+                <div class="leyenda-item">
+                    <span class="leyenda-color disponible"></span>
+                    <span>Disponible</span>
+                </div>
+                <div class="leyenda-item">
+                    <span class="leyenda-color ocupado"></span>
+                    <span>Ocupado</span>
+                </div>
+                <div class="leyenda-item">
+                    <span class="leyenda-color seleccionado"></span>
+                    <span>Seleccionado</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Laboratorios INSUCO. Todos los derechos reservados</p>
+        <div class="footer-redes">
+            <a href="https://www.facebook.com/share/1HpYqfM4oQ/" target="_blank" rel="noopener noreferrer">📘 Facebook</a>
+            <a href="https://www.instagram.com/insucovalparaiso?stkn=ams1cDF2bjFpejI1" target="_blank" rel="noopener noreferrer">📸 Instagram</a>
+        </div>
+    </footer>
+
+    <div class="watermark">INSUCO</div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+    <script src="../assets/js/firebase-config.js"></script>
+    <script src="../assets/js/mapa.js"></script>
+</body>
+</html>

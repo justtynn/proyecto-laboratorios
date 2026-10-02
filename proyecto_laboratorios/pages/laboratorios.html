@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorios - LISEO INSUCO</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/laboratorios.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="/assets/imagenes/Logo-insuco.png" alt="Logo Liceo INSUCO" class="logo-img">
+            </div>
+            <div class="logo">
+                <h1>Laboratorios INSUCO</h1>
+            </div>
+            <ul class="menu">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="laboratorios.html" class="active">Laboratorios</a></li>
+                <li><a href="sobre-mi.html">Sobre Mi</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="mapa.html">Mapa</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="laboratorios-hero">
+            <h2>Nuestros Laboratorios de Computación</h2>
+            <p>Selecciona un laboratorio para ver su información detallada</p>
+        </section>
+
+        <!-- PANEL DE ADMIN -->
+        <div id="admin-panel" style="display: none; background: #f8f9fa; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+                <div>
+                    <span id="user-info">👤 Usuario</span>
+                    <button id="logout-btn" class="btn-logout">Cerrar sesión</button>
+                </div>
+                <div>
+                    <small>🔑 Panel de Administración</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- FORMULARIO DE LOGIN -->
+        <div id="login-section" style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem;">
+            <h3>🔐 Iniciar sesión (Profesores)</h3>
+            <form id="login-form">
+                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                    <input type="email" id="email" placeholder="Correo electrónico" required style="padding: 0.5rem; border: 1px solid #ddd; border-radius: 5px; flex: 1; min-width: 150px;">
+                    <input type="password" id="password" placeholder="Contraseña" required style="padding: 0.5rem; border: 1px solid #ddd; border-radius: 5px; flex: 1; min-width: 150px;">
+                    <button type="submit" class="btn-login">Entrar</button>
+                </div>
+                <small style="display: block; margin-top: 0.5rem; color: #666;">
+                    Solo profesores autorizados pueden gestionar la disponibilidad
+                </small>
+            </form>
+        </div>
+
+        <!-- GRID DE LABORATORIOS -->
+        <section class="laboratorios-grid" id="laboratorios-grid">
+            <div class="loading">Cargando laboratorios...</div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Laboratorios INSUCO. Todos los derechos reservados</p>
+        <div class="footer-redes">
+            <a href="https://www.facebook.com/share/1HpYqfM4oQ/" target="_blank" rel="noopener noreferrer">📘 Facebook</a>
+            <a href="https://www.instagram.com/insucovalparaiso?stkn=ams1cDF2bjFpejI1" target="_blank" rel="noopener noreferrer">📸 Instagram</a>
+        </div>
+        <p class="footer-contacto">
+            Contacto: <a href="mailto:contacto@insuco.cl">contacto@insuco.cl</a>
+        </p>
+    </footer>
+
+    <div class="watermark">INSUCO</div>
+
+    <!-- MODAL DE IMÁGENES -->
+    <div id="image-modal" class="image-modal">
+        <div class="image-modal-content">
+            <button class="image-modal-close" id="imageModalClose">&times;</button>
+            <button class="image-modal-prev" id="imageModalPrev">&#10094;</button>
+            <img id="imageModalImg" src="" alt="Vista previa">
+            <button class="image-modal-next" id="imageModalNext">&#10095;</button>
+            <div class="image-modal-counter" id="imageModalCounter"></div>
+        </div>
+    </div>
+
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+
+    <script src="../assets/js/firebase-config.js"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>
