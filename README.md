@@ -76,8 +76,3 @@ También contiene enlaces hacia las principales secciones del sitio.
 
 ---
 
-## 💻 Laboratorios
-
-Esta es la sección principal del proyecto.
-
-En ella se muestran los
